@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+  <context id="context1">
+	    <jdbcConnection 
+		   driverClass="com.mysql.jdbc.Driver"
+	        connectionURL="jdbc:mysql://47.92.159.28:3306/start_distribution?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull"
+	        userId="dev"
+	        password="v+Ed@ByMay$$5.7" />
+	        
+	    <!-- model -->
+	    <javaModelGenerator 
+	    	targetPackage="test.model" 
+	      	targetProject="java-spring-mybatis-redis/src/main/java"
+	      	
+	    	/>
+	    	
+	    <!-- sql Mapper -->
+	    <sqlMapGenerator 
+	    	targetPackage="test.xml" 
+	      	targetProject="java-spring-mybatis-redis/src/main/java" />
+	    
+	   <!-- sql Dao -->  	
+	   <javaClientGenerator type="XMLMAPPER" 
+	   		targetPackage="test.dao"  
+	   		targetProject="java-spring-mybatis-redis/src/main/java">
+	      	<property name="enableSubPackages" value="true" />
+	    </javaClientGenerator>
+	    	
+	    <table schema="DisBrokerRelation" tableName="dis_broker_relation" />
+	    <table schema="DisBrokerIncomeLog" tableName="dis_broker_income_log"
+	    	enableSelectByExample="false"
+	    	enableDeleteByExample="false"
+	    	enableCountByExample="false"
+	    	enableUpdateByExample="false"
+	     />
+  </context>
+</generatorConfiguration>

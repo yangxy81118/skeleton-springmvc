@@ -1,0 +1,21 @@
+schema {
+	query:Query
+}
+
+type Query{
+	book(id: Int!): Book
+	author(id: Int!): Author
+}
+
+type Author{
+	name:String
+	age:Int
+	intro:String
+}
+
+type Book{
+	title:String
+	publisher:String
+	isn(test:String):String
+	author:Author
+}
