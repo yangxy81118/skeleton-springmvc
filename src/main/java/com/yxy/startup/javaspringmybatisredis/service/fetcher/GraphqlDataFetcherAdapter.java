@@ -25,7 +25,7 @@ public abstract class GraphqlDataFetcherAdapter<T> implements DataFetcher<T> {
 	 */
 	protected boolean fieldIsSelected(DataFetchingEnvironment context, String fieldName) {
 		List<Field> selectionField = context.getSelectionSet().get().get(fieldName);
-		return ObjectUtils.isEmpty(selectionField);
+		return !ObjectUtils.isEmpty(selectionField);
 	}
 	
 }

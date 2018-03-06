@@ -12,7 +12,7 @@ import com.yxy.startup.javaspringmybatisredis.service.GraphBaseService;
 
 import graphql.ExecutionResult;
 
-@RequestMapping("/graphreq")
+@RequestMapping("/zheshiyigeshenqide_request")
 @RestController
 public class GraphController {
 

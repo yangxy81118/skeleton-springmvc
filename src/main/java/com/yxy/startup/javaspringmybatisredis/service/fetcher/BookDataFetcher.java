@@ -1,19 +1,15 @@
 package com.yxy.startup.javaspringmybatisredis.service.fetcher;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.stereotype.Repository;
-import org.springframework.util.ObjectUtils;
 
 import com.yxy.startup.javaspringmybatisredis.domain.Author;
 import com.yxy.startup.javaspringmybatisredis.domain.Book;
 
-import graphql.language.Field;
-import graphql.schema.DataFetcher;
 import graphql.schema.DataFetchingEnvironment;
 
 @Repository
@@ -24,11 +20,11 @@ public class BookDataFetcher extends GraphqlDataFetcherAdapter<Book> {
 	
 	@PostConstruct
 	public void init(){
-		bookStorage.put(1, new Book("ABCD1","Title1","Tommy"));
-		bookStorage.put(2, new Book("ABCD2","Title2","JACK"));
-		bookStorage.put(3, new Book("ABCD3","Title3","SDFmy"));
-		bookStorage.put(4, new Book("ABCD4","Title4","TOM"));
-		bookStorage.put(5, new Book("ABCD5","Title5","Late"));
+		bookStorage.put(1, new Book("ABCD1","JAVA解惑","一个牛人"));
+		bookStorage.put(2, new Book("ABCD2","代码大全","什么什么出版社"));
+		bookStorage.put(3, new Book("ABCD3","JAVA核心技术","Sun"));
+		bookStorage.put(4, new Book("ABCD4","冰与火之歌","TOM"));
+		bookStorage.put(5, new Book("ABCD5","盗墓笔记","南派三叔"));
 		bookStorage.put(6, new Book("ABCD6","Title6","Kote"));
 		bookStorage.put(7, new Book("ABCD7","Title7","uytt"));
 	}
